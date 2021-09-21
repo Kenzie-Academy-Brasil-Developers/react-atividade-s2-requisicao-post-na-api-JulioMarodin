@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import { Container } from './styles';
 
 const Login = () => {
   const [userInputName, setInputUserName] = useState('');
@@ -26,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <Container>
       <form>
         <input
           placeholder="User name"
@@ -43,7 +44,7 @@ const Login = () => {
 
       {isLoggedIn && <span>Requisição completa!</span>}
       {userNotFound && <span>Requisição falhou!</span>}
-    </div>
+    </Container>
   );
 };
 
